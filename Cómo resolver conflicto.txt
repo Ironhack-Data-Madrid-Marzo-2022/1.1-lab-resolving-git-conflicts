@@ -1,0 +1,7 @@
+1) Crear doc.txt, escribir algo y hacer commit
+2) Crear una rama, modificar el archivo doc.txt y hacer commit
+3) Volver a rama main, modificar doc.txt y hacer commit
+4) Hacer merge de la nueva rama con la rama main
+5) Aparecerá un conflicto
+6) Editar el archivo doc.txt para que el contenido añadido desde ambas ramas no entre en conflicto
+7) Stagear el nuevo doc.txt modificado y commitear.
