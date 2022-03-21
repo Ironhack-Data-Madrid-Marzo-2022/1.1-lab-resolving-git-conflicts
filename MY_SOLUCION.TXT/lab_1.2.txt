@@ -1,0 +1,22 @@
+cd 1.1-lab-resolving-git-conflicts
+cd your-code
+git status 
+git add .
+git commit .
+git pull origin main
+echo "Creating Conflicts" >> about.me.md
+git log
+		Author: “Fominayasg” <fominayasg@gmail.com>
+Date:   Mon Mar 21 10:40:02 2022 +0100
+
+    :whale:
+
+commit 332c9c9d13ad076a1834aceabffcd9398371b895
+Author: “Fominayasg” <fominayasg@gmail.com>
+Date:   Mon Mar 21 10:36:27 2022 +0100
+
+git reset --hard 32a63d7d09589d80a8ff614be85d854792798aee
+(ERROR)
+cb ..
+git checkout -b lab-resolving-git-conflicts
+$ echo "PEDRO PENZINI -- VENEZOLANO-- COCINERO -- NI UNA -- PARA APRENDER -- REFERENCIA-- TECH -- JUNIOR ANALISIS-- GOOD PAYING JOB" >> about-me.md
