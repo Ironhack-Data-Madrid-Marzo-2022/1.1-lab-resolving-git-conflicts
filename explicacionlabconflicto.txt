@@ -1,0 +1,53 @@
+- Forkeamos la carpeta de la práctica y clonamos en el ordenador
+- C:\Users\agc13\documents\bootcamp> git clone https://github.com/ALBERTOGIL13/1.1-lab-resolving-git-conflicts.git
+
+-Creamos un archivo nuevo txt y añadimos texto 
+
+New-Item -Path C:\Users\agc13\documents\bootcamp\1.1-lab-resolving-git-conflicts\Prueba.txt -ItemType file
+
+Add-Content -Path \Users\agc13\documents\bootcamp\1.1-lab-resolving-git-conflicts\Prueba.txt -Value 'Hola me llamo Alberto'
+
+-Añadimos a Git y commit 
+
+git add Prueba.txt
+git commit -m 'Nuevo archivo Prueba'
+
+-Creamos una rama nueva 
+
+git branch rama
+
+-Cambiamos de rama 
+
+ git checkout rama
+
+- Modificamos el texto principal del archivo de 'Hola me llamo Alberto' a 'Hola me llamo Juan' 
+
+-Hacemos un git add y git commit en la rama secundaria rama 
+
+git add Prueba.txt
+
+git commit -m 'Cambio de nombre texto'
+
+-Cambiamos de rama a la principal 
+
+git checkout main
+
+- Hacer un git merge y te dará el siguiente error 
+
+Auto-merging Prueba.txt
+CONFLICT (content): Merge conflict in Prueba.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+- Arreglar el conflicto en el fichero modificando el texto, commiteas y si le das otra vez a merge no te sale error 
+
+(base) PS C:\Users\agc13\documents\bootcamp\1.1-lab-resolving-git-conflicts> git add Prueba.txt
+warning: LF will be replaced by CRLF in Prueba.txt.
+The file will have its original line endings in your working directory
+(base) PS C:\Users\agc13\documents\bootcamp\1.1-lab-resolving-git-conflicts> git commit -m "Arreglando conflicto"
+[main e09bde1] Arreglando conflicto
+(base) PS C:\Users\agc13\documents\bootcamp\1.1-lab-resolving-git-conflicts> git merge rama
+Already up to date.
+
+
+
+
