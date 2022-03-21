@@ -1,0 +1,33 @@
+En primer lugar, se crea un archivo en blanco que llamaremos 'prueba.txt' con el comando "touch prueba.txt".
+A continuación, escribimos algo de contenido (Hola soy una prueba) y lo subo a git usando 'git add' y 'git commit'. 
+Como tercer paso, creamos la rama secundaria y nos "movemos" a ella para modificar el contenido del archivo de prueba.txt y subirlo aqui.
+Una vez modificado el archivo, se vuelve a la rama principal y se modifica de nuevo el archivo para subirlo. Una vez subido, intentamos fusionar mabas utilizando merge y ahí es cuando salta el conflicto. Por lo tanto, para que se pueda fusionar el archivo, como solución se propone acceder al propio archivo de texte y eliminar las lineas de conflicto ("=======" y la primera y ultima).
+Como conclusion, he observado que el problema surge de que existen dos archivos con el mismo nombre en dos ramas distintas; y que además, el contenido de las líneas ocupadas es distinto en uno y en otro. (Quiero decir con esto que en la linea 1 hay palabras diferentes que ocpuan el mismo sitio en el fichero).
+Por último, dejo los comandos utilizados para crear el conflicto:
+
+touch prueba.txt
+echo "Hola soy una prueba" >> prueba.txt
+git add prueba.txt
+git commit -am "primera version"
+git checkout -b rama1
+echo "esto es otra prueba distinta" > prueba.txt
+git commit -am "contenido problematico"
+git checkout main
+echo "voy a aniadir esto" >> prueba.txt
+git commit -am "contenido nuevo de prueba"
+git merge rama1
+	Auto-fusionando prueba.txt
+	CONFLICTO (contenido): Conflicto de fusión en prueba.txt
+	Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+
+cat prueba.txt
+	<<<<<<< HEAD
+	Hola soy una prueba
+	voy a aniadir esto
+	=======
+	esto es otra prueba distinta
+	>>>>>>> rama1
+
+(SE HACE LA MODIFICACION MANUAL)
+git add prueba.txt
+git commit -m "fusionado y arreglado"
