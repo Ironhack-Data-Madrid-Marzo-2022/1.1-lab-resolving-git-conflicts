@@ -1,0 +1,24 @@
+1. git clone https://github.com/miguelmanzan/1.1-lab-resolving-git-conflicts.git
+2. git pull origin main
+3. git checkout -b mybranch1
+4. Change first line in about-me.md - This text will generate the conflict
+5. git add .
+6. git commit -m "Change md to force conflict"
+7. git push origin mybranch1
+8. git checkout -b mybranch2
+9. Change first line in about-me.md - This different text will generate the conflict
+10. git add .
+11. git commit -m "Change md to force conflict"
+12. git push origin mybranch1
+13. git checkout main
+14. git merge origin mybranch1
+15. git add .
+16. git commit -m "Merge mybranch1 into main"
+17. git push origin main
+18. git merge origin mybranch2
+19. Here is the conflict. I resolved it in VSC and do the folow:
+20. git add .
+21. git commit -m "Resolved conflict when merge my branch into main"
+22. git log
+23. git reset --hard commit d8ba7576951341f76fb0016a14167be5277cee9
+24. git checkout -b lab-resolving-git-conflicts
