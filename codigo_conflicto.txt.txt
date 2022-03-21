@@ -1,0 +1,19 @@
+git branch rama
+git checkout rama
+add-content README.md "No me salió pero a ver si de esta va"
+git add .
+git commit -m "Creando un conflicto"
+git push origin main
+git merge rama
+
+# Me genera el conflicto
+
+it merge -s ours rama
+
+#hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+#hint: as appropriate to mark resolution and make a commit.
+
+Modifico manualmente el main
+
+git add .
+git commit -m "resolving conflicts with master branch"
