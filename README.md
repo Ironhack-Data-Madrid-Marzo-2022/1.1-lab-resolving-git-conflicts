@@ -8,7 +8,7 @@ Resolving Git conflicts and merging branches is an important skill every softwar
 
 ### Prerequisites
 
-* Att this point you should have created a fork in your own Git account from the bootcamp's lab repo. 
+* At this point you should have created a fork in your own Git account from the bootcamp's lab repo. 
 
 * You should also have cloned your forked repo to your computer.
 
@@ -140,4 +140,8 @@ After resolving the conflicts, add the fixed files and commit. In the commit mes
 Make the pull request to **merge the `lab-resolving-git-conflicts` branch of your fork to the bootcamp's lab repo**. This can be done in the webpage of your bootcamp's lab repo. Select the correct repos and branches in both the *base* and *head*. Git should tell you the pull request is able to be merged. Your pull request should look like:
 
 ![Git pull request](git-pull-request.png)
+<<<<<<< HEAD
 hola esto es un cambio
+=======
+cambio
+>>>>>>> ramafran

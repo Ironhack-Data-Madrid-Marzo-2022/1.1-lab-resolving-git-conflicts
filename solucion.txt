@@ -1,0 +1,22 @@
+$ git branch ramafran
+$ git checkout ramafran
+
+hago un cambio en el archivo readme.txt 
+
+$ git add.
+$ git commit -m "cambio"
+$ git push origin main
+$ git checkout main
+
+
+me da este conflicto en el archivo:
+<<<<<<< HEAD
+hola esto es un cambio
+=======
+cambio
+>>>>>>> ramafran
+
+
+
+
+
