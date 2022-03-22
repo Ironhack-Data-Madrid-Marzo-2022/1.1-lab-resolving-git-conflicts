@@ -1,0 +1,41 @@
+1.	git clone https://github.com/sergiomessaoudi/1.1-lab-resolving-git-conflicts.git #sirve para crear el repositorio en nuestro ordenador local desde la nube de github
+
+2.	git pull origin main #recoge todos los archivos que haya en la nube
+
+
+3.	git checkout -b mirama1 #crea una rama nueva llamada “mirama1”
+
+4.	Cambiar el about-me.md – #esto sirve para generar un conflicto
+
+
+5.	git add . # se añaden los cambios
+
+6.	git commit -m "cambiando el aboutme para generar conflicto"
+
+
+7.	git push origin mirama1 #enviando cambios a la Github
+
+8.	git add ."
+
+
+9.	git checkout main
+
+10.	git merge origin mirama1 #sirve para tratar de unir las dos ramas
+
+
+11.	git add . #se añaden los archivos que he modificado
+
+12.	git commit -m "juntar mirama1 con la rama main"
+
+
+13.	git push origin main #se suben los cambios a la red
+
+14.	git merge origin mirama2 #Aquí se producirá el conflicto
+
+
+15.	git add .
+
+16.	git commit -m "resolviendo conflictos entre fusion de ramas"
+
+
+17.	git log
